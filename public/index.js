@@ -57,6 +57,28 @@ document.addEventListener('DOMContentLoaded', () => {
       title: {text: 'Fruits'},
       categories: ['Apples', 'Bananas', 'Oranges']
     },
+    responsive: {
+      rules: [
+        {
+          condition: {
+            maxWidth: 500,        
+          },
+          chartOptions: {
+            legend: {
+              enabled: false
+            },
+            yAxis: {
+              title: {
+                text: ''
+              }
+            },
+            credits: {
+              enabled: false
+            }
+          }
+        }
+      ]
+    },
     series: [
       {
         name: 'John',
@@ -104,6 +126,28 @@ document.addEventListener('DOMContentLoaded', () => {
     xAxis: {
       alternateGridColor: '#aaa'
       // categories: ['Apples', 'Bananas', 'Oranges']
+    },
+    responsive: {
+      rules: [
+        {
+          condition: {
+            maxWidth: 500,        
+          },
+          chartOptions: {
+            legend: {
+              enabled: false
+            },
+            yAxis: {
+              title: {
+                text: ''
+              }
+            },
+            credits: {
+              enabled: false
+            }
+          }
+        }
+      ]
     },
     series: [
       {
@@ -169,6 +213,28 @@ document.addEventListener('DOMContentLoaded', () => {
         text: 'Fruits Eaten',
       },
     },
+    responsive: {
+      rules: [
+        {
+          condition: {
+            maxWidth: 500,        
+          },
+          chartOptions: {
+            legend: {
+              enabled: false
+            },
+            yAxis: {
+              title: {
+                text: ''
+              }
+            },
+            credits: {
+              enabled: false
+            }
+          }
+        }
+      ]
+    },
     series: [
       {
         name: 'Fruits Consumption',
@@ -205,6 +271,28 @@ document.addEventListener('DOMContentLoaded', () => {
         text: 'Fruits Eaten',
       },
     },
+    responsive: {
+      rules: [
+        {
+          condition: {
+            maxWidth: 500,        
+          },
+          chartOptions: {
+            legend: {
+              enabled: false
+            },
+            yAxis: {
+              title: {
+                text: ''
+              }
+            },
+            credits: {
+              enabled: false
+            }
+          }
+        }
+      ]
+    }
   };
   fetch('http://localhost:3333/test.csv').then(res => {
     return res.text();
@@ -223,21 +311,43 @@ document.addEventListener('DOMContentLoaded', () => {
       zoomType: 'xy',
     },
     title: {
-      text: 'Fourth chart',
+      text: 'Fifth chart',
     },
     yAxis: {
       title: {
         text: 'Fruits Eaten',
       },
     },
+    responsive: {
+      rules: [
+        {
+          condition: {
+            maxWidth: 500,        
+          },
+          chartOptions: {
+            legend: {
+              enabled: false
+            },
+            yAxis: {
+              title: {
+                text: ''
+              }
+            },
+            credits: {
+              enabled: false
+            }
+          }
+        }
+      ]
+    }
   };
  
-    containerFourOptions.data = {
+  containerFiveOptions.data = {
       csvURL: 'http://localhost:3333/test.csv',
       enablePolling: true,
       dataRefreshRate: 2 // seconds
     };
-    Highcharts.chart('container5', containerFourOptions);
+    Highcharts.chart('container5', containerFiveOptions);
 
 
 })
