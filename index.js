@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
       zoomType: 'x',
     },
     credits: {
-      enabled: false
+      // enabled: false
+      text: 'My custom credit',
+      href: 'https://google.com'
     },
     title: {
       text: 'First chart'
