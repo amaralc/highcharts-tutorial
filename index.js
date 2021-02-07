@@ -105,7 +105,38 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     series: [
       {
-        data: [[1, 10], [2, 20], [3,10], [4,15], [5, 5]]
+        name: 'John',
+        data: [
+          {
+            name: 'Low',
+            color: 'red',
+            x: 1,
+            y: 5
+          },
+          {
+            name: 'Heigh',
+            color: 'green',
+            x: 2,
+            y: 10
+          }
+        ]
+      },
+      {
+        name: 'Marie',
+        data: [
+          {
+            name: 'Low',
+            color: 'red',
+            x: 1,
+            y: 8
+          },
+          {
+            name: 'Heigh',
+            color: 'green',
+            x: 2,
+            y: 20
+          }
+        ]
       }
     ]
   })
