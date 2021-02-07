@@ -22,8 +22,22 @@ document.addEventListener('DOMContentLoaded', () => {
       text: 'First chart'
     },
     tooltip: {
+      shared: true,
+      // /** Example of how to use formatter with tooltips that are not shared */
+      // formatter(){
+      //   return `<strong>Values</strong><br/><em>Series:</em> ${this.point.series.name}<br/><em>X:</em> ${this.x}.<br/> <em>Y:</em> ${this.y}`
+      // },
+
+      /** Example of how to use formatter with tooltips that are shared */
       formatter(){
-        return `<strong>Values</strong><br/><em>Series:</em> ${this.point.series.name}<br/><em>X:</em> ${this.x}.<br/> <em>Y:</em> ${this.y}`
+        let s = `<strong>X is:</strong> ${this.x} <br/> Y values:`;
+        console.log(this);
+
+        this.points.forEach(point => {
+          s += `<br> <p style="color: ${point.color}">${point.series.name}: ${point.y}</p>`
+        });
+
+        return s;
       },
       animation: true,
       backgroundColor: '#333',
