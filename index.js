@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  Highcharts.chart('container', {
+  Highcharts.chart('container1', {
     chart: {
       type: 'areaspline',
       zoomType: 'xy', // 'x', 'y', or 'xy'
@@ -84,6 +84,73 @@ document.addEventListener('DOMContentLoaded', () => {
       {
         name: 'Stephen',
         data: [3, 1, 1,0, 0, 0, 0, 1, 5, 3, 3]
+      }
+    ]
+  })
+  Highcharts.chart('container2', {
+    chart: {
+      type: 'areaspline',
+      zoomType: 'xy',
+    },
+    title: {
+      text: 'Second chart'
+    },
+    yAxis: {
+      title: {
+        text: 'Fruits Eaten',
+      }
+    },
+    xAxis: {
+      // categories: ['Apples', 'Bananas', 'Oranges']
+    },
+    series: [
+      {
+        name: 'John',
+        negativeColor: 'red',
+        data: [
+          {
+            x: 1,
+            y: 5
+          },
+          {
+            name: 'Heigh',
+            color: 'green',
+            x: 2,
+            y: 10
+          },
+          {
+            name: 'Low',
+            color: 'red',
+            x: 3,
+            y: -10
+          },
+          {
+            x: 4,
+            y: 5
+          }
+        ]
+      },
+      {
+        name: 'Marie',
+        data: [
+          {
+            name: 'Low',
+            color: 'red',
+            x: 1,
+            y: 8
+          },
+          {
+            name: 'Heigh',
+            color: 'green',
+            x: 2,
+            y: 20
+          }
+        ]
+      },
+      {
+        name: 'Julie',
+        negativeColor: 'red',
+        data: [1,2,6,5,4,10,-5,0,-15,-5,15,25,0]
       }
     ]
   })
