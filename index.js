@@ -93,14 +93,16 @@ document.addEventListener('DOMContentLoaded', () => {
       zoomType: 'xy',
     },
     title: {
-      text: 'Second chart'
+      text: 'Second chart',
     },
     yAxis: {
       title: {
         text: 'Fruits Eaten',
-      }
+      },
+      // alternateGridColor: '#aaa'
     },
     xAxis: {
+      alternateGridColor: '#aaa'
       // categories: ['Apples', 'Bananas', 'Oranges']
     },
     series: [
