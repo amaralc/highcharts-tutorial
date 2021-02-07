@@ -156,4 +156,38 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     ]
   })
+  Highcharts.chart('container3', {
+    chart: {
+      type: 'spline',
+      zoomType: 'xy',
+    },
+    title: {
+      text: 'Third chart',
+    },
+    yAxis: {
+      title: {
+        text: 'Fruits Eaten',
+      },
+    },
+    series: [
+      {
+        name: 'Fruits Consumption',
+        data: [1,2,6,5,4,10,-5,0,-15,-5,15,25,0],
+        zones: [
+          {
+            value: 0, 
+            color: '#f7a35c'
+          },
+          {
+            value: 6, 
+            color: '#f7035c'
+          },
+          {
+            color: '#00335c'
+          },
+
+        ]
+      }
+    ]
+  })
 })
