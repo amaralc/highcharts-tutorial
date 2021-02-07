@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
       type: 'areaspline',
       zoomType: 'xy', // 'x', 'y', or 'xy'
     },
+    colors: ['#1c3', '#1ff', '#f13', '#ff2', '#333', '#590'],
     credits: {
       // enabled: false
       text: 'My custom credit',
@@ -42,12 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
     series: [
       {
         name: 'John',
-        data: [1,1,1,5,7,5, 0, 1, 5, 3, 3]
+        data: [1,1,1,5,7,5, 0, 1, 5, 3, 3],
+        color: '#00f'
       }
       ,
       {
         name: 'Jane',
-        data: [2, 4, 8, 8, 3, 3, 0, 1, 5, 3, 3]
+        data: [2, 4, 8, 8, 3, 3, 0, 1, 5, 3, 3],
+        color: '#f0f'
       },
       {
         name: 'Jack',
