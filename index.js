@@ -101,11 +101,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     },
     xAxis: {
-      categories: ['Apples', 'Bananas', 'Oranges']
+      // categories: ['Apples', 'Bananas', 'Oranges']
     },
     series: [
       {
-        data: [1, 20, 10, 15, 5]
+        data: [[1, 10], [2, 20], [3,10], [4,15], [5, 5]]
       }
     ]
   })
