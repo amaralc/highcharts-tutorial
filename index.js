@@ -7,7 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
     credits: {
       // enabled: false
       text: 'My custom credit',
-      href: 'https://google.com'
+      href: 'https://google.com',
+      position: {
+        align: 'left',
+        x: 10
+      },
+      style: {
+        fontSize: "10px",
+        color: '#f00',
+      }
     },
     title: {
       text: 'First chart'
