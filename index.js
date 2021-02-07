@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
       text: 'First chart'
     },
     tooltip: {
+      formatter(){
+        return `<strong>Values</strong><br/><em>Series:</em> ${this.point.series.name}<br/><em>X:</em> ${this.x}.<br/> <em>Y:</em> ${this.y}`
+      },
       animation: true,
       backgroundColor: '#333',
       borderColor: 'red',
