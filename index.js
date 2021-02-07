@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
   })
   Highcharts.chart('container2', {
     chart: {
-      type: 'line',
+      type: 'areaspline',
       zoomType: 'xy',
     },
     title: {
@@ -106,10 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
     series: [
       {
         name: 'John',
+        negativeColor: 'red',
         data: [
           {
-            name: 'Low',
-            color: 'red',
             x: 1,
             y: 5
           },
@@ -118,6 +117,16 @@ document.addEventListener('DOMContentLoaded', () => {
             color: 'green',
             x: 2,
             y: 10
+          },
+          {
+            name: 'Low',
+            color: 'red',
+            x: 3,
+            y: -10
+          },
+          {
+            x: 4,
+            y: 5
           }
         ]
       },
@@ -137,6 +146,11 @@ document.addEventListener('DOMContentLoaded', () => {
             y: 20
           }
         ]
+      },
+      {
+        name: 'Julie',
+        negativeColor: 'red',
+        data: [1,2,6,5,4,10,-5,0,-15,-5,15,25,0]
       }
     ]
   })
