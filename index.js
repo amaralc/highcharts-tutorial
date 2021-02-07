@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   Highcharts.chart('container', {
     chart: {
       type: 'areaspline',
-      zoomType: 'x',
+      zoomType: 'xy', // 'x', 'y', or 'xy'
     },
     credits: {
       // enabled: false
@@ -32,28 +32,28 @@ document.addEventListener('DOMContentLoaded', () => {
     series: [
       {
         name: 'John',
-        data: [1,1,1,5,7,5]
+        data: [1,1,1,5,7,5, 0, 1, 5, 3, 3]
       }
       ,
       {
         name: 'Jane',
-        data: [2, 4, 8, 8, 3, 3]
+        data: [2, 4, 8, 8, 3, 3, 0, 1, 5, 3, 3]
       },
       {
         name: 'Jack',
-        data: [2, 3, 1, 2, 3, 6]
+        data: [2, 3, 1, 2, 3, 6, 0, 1, 5, 3, 3]
       },
       {
         name: 'Marie',
-        data: [1, 1, 2, 2, 1, 7]
+        data: [1, 1, 2, 2, 1, 7, 0, 1, 5, 3, 3]
       },
       {
         name: 'James',
-        data: [1, 4, 5, 0, 0, 0]
+        data: [1, 4, 5, 0, 0, 0, 0, 1, 5, 3, 3]
       },
       {
         name: 'Stephen',
-        data: [3, 1, 1,0, 0, 0]
+        data: [3, 1, 1,0, 0, 0, 0, 1, 5, 3, 3]
       }
     ]
   })
