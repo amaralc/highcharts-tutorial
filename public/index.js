@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
   })
   
   
-  const options = {
+  const containerFourOptions = {
     chart: {
       type: 'column',
       zoomType: 'xy',
@@ -206,17 +206,38 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     },
   };
-
-
-
-
   fetch('http://localhost:3333/test.csv').then(res => {
     return res.text();
   }).then(csv => {
-    options.data = {
+    containerFourOptions.data = {
       csv
     };
-    Highcharts.chart('container4', options);
+    Highcharts.chart('container4', containerFourOptions);
   })
+
+
+
+  const containerFiveOptions = {
+    chart: {
+      type: 'column',
+      zoomType: 'xy',
+    },
+    title: {
+      text: 'Fourth chart',
+    },
+    yAxis: {
+      title: {
+        text: 'Fruits Eaten',
+      },
+    },
+  };
+ 
+    containerFourOptions.data = {
+      csvURL: 'http://localhost:3333/test.csv',
+      enablePolling: true,
+      dataRefreshRate: 2 // seconds
+    };
+    Highcharts.chart('container5', containerFourOptions);
+
 
 })
