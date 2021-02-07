@@ -20,6 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
     title: {
       text: 'First chart'
     },
+    tooltip: {
+      animation: true,
+      backgroundColor: '#333',
+      borderColor: 'red',
+      borderRadius: 10,
+      // followPointer: true,
+      style: {
+        color: '#fff'
+      }
+    },
     yAxis: {
       title: {
         text: 'Fruits Eaten',
