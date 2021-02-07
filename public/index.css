@@ -3,12 +3,14 @@ body {
   margin: 0px;
 }
 
-#container0 {
-  padding: 50px;
-  margin-right: 50px;
-  display: grid;
-  gap: 50px;
-  grid-template-columns: 50% 50%;
+@media (min-width: 600px) {
+  #container0 {
+    padding: 50px;
+    margin-right: 50px;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 50% 50%;
+  }
 }
 
 #container0 div{
